@@ -16,9 +16,11 @@ The included nginx config is set to run on port 5100. The Flask app will run on 
 
 4. Activate the virtualenv, and run the app:
 
-    $ /path/to/venv/bin/activate
-    (venv)$ cd /path/to/app
-    (venv)$ ./run.sh
+```
+$ /path/to/venv/bin/activate
+(venv)$ cd /path/to/app
+(venv)$ ./run.sh
+```
 
 5. Open your browser to [http://localhost:5100/herp/](http://localhost:5100/herp/).
 
