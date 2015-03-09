@@ -1,8 +1,8 @@
 ## Flask Example: Blueprint on Arbitrary Endpoint
 
-This uses Nginx to proxy an endpoint back to a simple Flask application.
+This uses Nginx to proxy an endpoint back to a simple Flask application. In this example, the endpoint is `herp/`.
 
-The Flask Blueprint relies on an environment variable to determine that endpoint. This typically is specified in a run script, or a supervisor config.
+The Flask Blueprint relies on an environment variable to determine that endpoint. This typically is specified in a run script, or a supervisor config. In this example, the run.sh file exports the `URL_PREFIX` variable, and the Blueprint in `simple_app.py` picks that up and uses it, if it's been provided. If that environment variable has *not* been set, then it simple defaults to an empty prefix, and is mounted at the root (`/`).
 
 The included nginx config is set to run on port 5100. The Flask app will run on port 5000, which is the Flask default. See `app.py` to change that.
 
@@ -20,5 +20,5 @@ The included nginx config is set to run on port 5100. The Flask app will run on 
     (venv)$ cd /path/to/app
     (venv)$ ./run.sh
 
-5. Open your browser to http://localhost:5100/herp/.
+5. Open your browser to [http://localhost:5100/herp/](http://localhost:5100/herp/).
 
