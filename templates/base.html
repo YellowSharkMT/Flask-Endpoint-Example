@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Simple Pages</title>
+  </head>
+
+  <body>
+    <h1>Simple Pages</h1>
+    <ul>
+      <li><a href="{{ url_for('simple_page.show', page='index') }}">Index</a></li>
+      <li><a href="{{ url_for('simple_page.show', page='page1') }}">Page 1</a></li>
+    </ul>
+    {% block content %}{% endblock %}
+  </body>
+</html>
