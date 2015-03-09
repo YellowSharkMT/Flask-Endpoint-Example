@@ -11,4 +11,5 @@ def create_app():
 app = create_app()
 
 if __name__ == '__main__':
-  app.run()
+  # See http://flask.pocoo.org/docs/0.10/api/#flask.Flask.run for info on settings ip, port, etc.
+  app.run() 
